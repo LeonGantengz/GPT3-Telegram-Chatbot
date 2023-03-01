@@ -13,7 +13,7 @@ import openai
 #OpenAI API key
 aienv = os.getenv('OPENAI_KEY')
 if aienv == None:
-    openai.api_key = "YOUR OPENAI API KEY GOES HERE"
+    openai.api_key = "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"
 else:
     openai.api_key = aienv
 print(aienv)
@@ -21,7 +21,7 @@ print(aienv)
 #Telegram bot key
 tgenv = os.getenv('TELEGRAM_KEY')
 if tgenv == None:
-    tgkey = "YOUR TELEGRAM BOT KEY GOES HERE"
+    tgkey = "5624390876:AAFtmB-sV52rPNg3Ty6O1rPgmqUZDrLHViw"
 else:
     tgkey = tgenv
 print(tgenv)
@@ -41,7 +41,7 @@ running = False
 cache = None
 qcache = None
 chat_log = None
-botname = 'AI'
+botname = 'SmartBoda'
 username = 'Human'
 # Max chat log length (A token is about 4 letters and max tokens is 2048)
 max = int(3000)
@@ -83,7 +83,7 @@ def start(bot, update):
 
 def help(bot, update):
     """Send a message when the command /help is issued."""
-    update.message.reply_text('[/reset] resets the conversation, [/retry] retries the last output, [/username name] sets your name to the bot, default is "Human", [/botname name] sets the bots character name, default is "AI"')
+    update.message.reply_text('[/reset] resets the conversation, [/retry] retries the last output, [/username name] sets your name to the bot, default is "Human", [/botname name] sets the bots character name, default is "SmartBoda"')
 
 
 def reset(bot, update):
